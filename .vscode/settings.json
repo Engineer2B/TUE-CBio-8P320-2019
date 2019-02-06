@@ -1,0 +1,26 @@
+{
+	"json.schemas": [{
+			"fileMatch": [
+				"*.preset"
+			],
+			"url": "https://raw.githubusercontent.com/Engineer2B/PowerCalculator-Schemas/36cbd078bd96c9bae05b4280696e423ba1f99f44/preset.schema.json"
+		},
+		{
+			"fileMatch": [
+				"*.surface"
+			],
+			"url": "https://raw.githubusercontent.com/Engineer2B/PowerCalculator-Schemas/4f4a29615796ebfa93e278036a8c53eaa16906c4/surface.schema.json"
+		},
+		{
+			"fileMatch": [
+				"*.transducer"
+			],
+			"url": "https://raw.githubusercontent.com/Engineer2B/PowerCalculator-Schemas/36cbd078bd96c9bae05b4280696e423ba1f99f44/transducer.schema.json"
+		}
+	],
+	"files.associations": {
+		"*.preset": "json",
+		"*.surface": "json",
+		"*.transducer": "json"
+	}
+}
