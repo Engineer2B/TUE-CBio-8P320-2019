@@ -19,6 +19,13 @@ April 5 2019 17:30.
 
 ## :books: Documentation
 
+### Euler angles
+
+* [:movie_camera:Video 1](https://youtu.be/3Zjf95Jw2UE)
+* [:movie_camera:Video 2](https://youtu.be/zrDCI89bSp4)
+* [:movie_camera:Video 3](https://youtu.be/HBLZuV92qGw)
+* [:movie_camera:Video 4](https://youtu.be/4XcoUhpdUjw)
+
 ### Git
 
 The version control system used in this project and by GitHub.com.
