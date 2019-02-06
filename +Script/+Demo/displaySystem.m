@@ -28,11 +28,12 @@ patchOptsExtrema.DisplayName = 'Focus';
 mp.DisplayFacility.SetAxisLimits(extrema);
 %mp.ShowExtrema(extrema, patchOptsExtrema);
 
-patchOpts = Source.Display.Options.Patch.FromStyle(fac.StyleSettings);
-patchOpts.Marker = Source.Enum.Marker.Circle;
-
-if(exist('transducer', 'var'))
-	patchOpts.MarkerFaceColor = Source.Enum.Color.Marker.cyan;
-	patchOpts.DisplayName = 'Transducer elementen';
-	mp.ShowMarkers(transducer.ElementPositions, patchOpts);
-end
+transducer = Source.Physics.Transducer.FromTransducerFile(logger,...
+	fullfile(Settings.TRANSDUCER_FOLDER,...
+	'Sonalleve', 'Positions.transducer'), media);
+nOfTransducerElements = length(transducer.ElementPositions);
+lineOpts = arrayfun(@(linOpt) mp.DisplayFacility.LineOptions.copy(),...
+	1:nOfTransducerElements);
+patchOpts = arrayfun(@(patOpt) mp.DisplayFacility.PatchOptions.copy(),...
+	1:2);
+mp.ShowTransducer(transducer, 2e-3, [0 1e-2 0], lineOpts, patchOpts);
