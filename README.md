@@ -13,8 +13,8 @@ April 5 2019 17:30.
 ## :dvd: Installation
 
 * [MATLAB](https://nl.mathworks.com/downloads/web_downloads/select_release) - install version 2018a+ with the curve fitting toolbox selected.
-* :floppy_disk: [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user)
 * :floppy_disk: [git](https://git-scm.com/download/win)
+* :floppy_disk: [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user)
 * :floppy_disk: [GMSH version 3.0.6](http://gmsh.info/bin/Windows/gmsh-3.0.6-Windows64.zip)
 
 ## :books: Documentation
