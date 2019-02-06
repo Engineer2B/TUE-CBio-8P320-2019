@@ -1,0 +1,7 @@
+{
+	"Name": "Markoil",
+	"Density": 2,
+	"Acoustic attenuation": 3,
+	"Speed of sound": 3,
+	"Heat absorption fraction": 0.5
+}

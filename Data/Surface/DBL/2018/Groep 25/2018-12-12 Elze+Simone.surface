@@ -1,0 +1,62 @@
+{
+	"Cylinders": [{
+			"MediumName": "Muscle",
+			"Center": {
+				"X": 0.1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Radius": 2e-2,
+			"ShaftDirection": {
+				"X": 0,
+				"Y": 0,
+				"Z": 1
+			},
+			"Id": 2
+		},
+		{
+			"MediumName": "Bone",
+			"Center": {
+				"X": 0.1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Radius": 2e-2,
+			"ShaftDirection": {
+				"X": 0,
+				"Y": 0,
+				"Z": 1
+			},
+			"Id": 2
+		}
+	],
+	"Planes": [{
+			"MediumName": "Markoil",
+			"Center": {
+				"X": 1e-3,
+				"Y": 0,
+				"Z": 0
+			},
+			"Normal": {
+				"X": -1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Id": 1
+		},
+		{
+			"MediumName": "Muscle",
+			"Center": {
+				"X": 1e-3,
+				"Y": 0,
+				"Z": 0
+			},
+			"Normal": {
+				"X": 1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Id": 1
+		}
+	]
+}

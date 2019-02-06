@@ -1,0 +1,49 @@
+{
+	"Description": "Experiment 1 session 1 d.d. 30-11-2018",
+	"Sampling": {
+		"LatticeSpacing": {
+			"X": 2.44140625e-04,
+			"Y": 2.44140625e-04,
+			"Z": 2.44140625e-04
+		},
+		"LatticeExtrema": {
+			"X": {
+				"Min": -0.0078125,
+				"Max": 0.0078125
+			},
+			"Y": {
+				"Min": -0.0078125,
+				"Max": 0.0078125
+			},
+			"Z": {
+				"Min": -0.0037841796875,
+				"Max": 0.0040283203125
+			}
+		},
+		"ThetaMax": 1.5707963267948966,
+		"PowerLimit": 1e-4,
+		"RaysPerElement": 10
+	},
+	"System": {
+		"ObjectTransformation": {
+			"Inclination": 0,
+			"Azimuth": 0,
+			"ScaleFactor": 1,
+			"Translation": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		},
+		"TransducerSettings": {
+			"FocusDiameter": 4e-3,
+			"Power": 5,
+			"Frequency": 1.2e6,
+			"Focus": {
+				"X": 14e-2,
+				"Y": 0,
+				"Z": 0
+			}
+		}
+	}
+}

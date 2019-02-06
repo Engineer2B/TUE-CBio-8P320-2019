@@ -1,0 +1,13 @@
+{
+	"Name": "Bone",
+	"Density": 1,
+	"Acoustic attenuation":{
+		"Longitudinal": 1,
+		"Transversal": 2
+	},
+	"Speed of sound":{
+		"Longitudinal": 2,
+		"Transversal": 1.5
+	},
+	"Heat absorption fraction": 1
+}

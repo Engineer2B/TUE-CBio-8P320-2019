@@ -1,0 +1,7 @@
+{
+	"Name": "Muscle",
+	"Density": 1040,
+	"Acoustic attenuation": 7,
+	"Speed of sound": 1537,
+	"Heat absorption fraction": 0.35
+}

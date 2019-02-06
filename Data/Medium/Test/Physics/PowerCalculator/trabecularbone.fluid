@@ -1,0 +1,8 @@
+{
+	"Name": "TrabecularBone",
+	"Density": 1055,
+	"Acoustic attenuation": 210,
+	"Speed of sound": 1886,
+	"Heat absorption fraction": 0.20
+}
+

@@ -1,0 +1,49 @@
+{
+	"Description": "The default mesh topology configuration",
+	"Sampling": {
+		"LatticeSpacing": {
+			"X": 2.44140625e-04,
+			"Y": 2.44140625e-04,
+			"Z": 2.44140625e-04
+		},
+		"LatticeExtrema": {
+			"X": {
+				"Min": -14e-2,
+				"Max": 11e-2
+			},
+			"Y": {
+				"Min": -5e-2,
+				"Max": 75e-3
+			},
+			"Z": {
+				"Min": -5e-2,
+				"Max": 75e-3
+			}
+		},
+		"RaysPerElement": 1,
+		"PowerLimit": 1e-5,
+		"ThetaMax": 0.69
+	},
+	"System": {
+		"ObjectTransformation": {
+			"Inclination": 0,
+			"Azimuth": 1.5707963267948966,
+			"ScaleFactor": 5e-2,
+			"Translation": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		},
+		"TransducerSettings": {
+			"Power": 20,
+			"Frequency": 1.4e6,
+			"FocusDiameter": 2e-3,
+			"Focus": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"Name": "FromFileFluid",
+	"Density": 1,
+	"Acoustic attenuation": 2,
+	"Speed of sound": 3,
+	"Heat absorption fraction": 0.1
+}

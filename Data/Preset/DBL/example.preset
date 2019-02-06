@@ -1,0 +1,49 @@
+{
+	"Description": "For Design Based Learning Course 8QC00",
+	"Sampling": {
+		"LatticeSpacing": {
+			"X": 4.88281250e-04,
+			"Y": 8.39843750e-04,
+			"Z": 1.220703125e-04
+		},
+		"LatticeExtrema": {
+			"X": {
+				"Min": -0.051269531250,
+				"Max": 2.44140625e-02
+			},
+			"Y": {
+				"Min": -0.0209960937500,
+				"Max": 0.020996093750
+			},
+			"Z": {
+				"Min": -0.003051757812500,
+				"Max": 0.003051757812500
+			}
+		},
+		"RaysPerElement": 100,
+		"PowerLimit": 5e-8,
+		"ThetaMax": 0.69
+	},
+	"System": {
+		"ObjectTransformation": {
+			"Inclination": 0,
+			"Azimuth": 0,
+			"ScaleFactor": 1,
+			"Translation": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		},
+		"TransducerSettings": {
+			"Power": 20,
+			"Frequency": 1.4e6,
+			"FocusDiameter": 4e-3,
+			"Focus": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		}
+	}
+}

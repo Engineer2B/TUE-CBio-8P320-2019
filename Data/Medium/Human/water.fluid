@@ -1,0 +1,7 @@
+{
+	"Name": "Water",
+	"Density": 997,
+	"Acoustic attenuation": 0.021750283044618,
+	"Speed of sound": 1500,
+	"Heat absorption fraction": 1
+}

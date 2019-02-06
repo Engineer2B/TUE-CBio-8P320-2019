@@ -1,0 +1,7 @@
+{
+	"Name": "Air",
+	"Density": 1.225,
+	"Acoustic attenuation": 22.6574,
+	"Speed of sound": 343.21,
+	"Heat absorption fraction": 1
+}

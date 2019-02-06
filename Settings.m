@@ -8,7 +8,9 @@ classdef Settings
 		STATE_FOLDER = fullfile(Settings.DATA_FOLDER, 'State')
 		PROFILE_FOLDER = fullfile(Settings.ROOT_FOLDER, 'Profile')
 		SURFACE_FOLDER = fullfile(Settings.DATA_FOLDER, 'Surface')
-		TRANSDUCER_FOLDER = fullfile(Settings.DATA_FOLDER, 'Transducer');
-		PRESET_FOLDER = fullfile(Settings.DATA_FOLDER, 'Preset');
+		MEDIUM_FOLDER = fullfile(Settings.DATA_FOLDER, 'Medium')
+		TRANSDUCER_FOLDER = fullfile(Settings.DATA_FOLDER, 'Transducer')
+		PRESET_FOLDER = fullfile(Settings.DATA_FOLDER, 'Preset')
+		CONFIGURATION_FOLDER = fullfile(Settings.DATA_FOLDER, 'Configuration')
 	end
 end

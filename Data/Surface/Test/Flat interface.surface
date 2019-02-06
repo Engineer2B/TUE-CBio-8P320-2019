@@ -1,0 +1,31 @@
+{
+	"Planes": [{
+			"MediumName": "Bone",
+			"Center": {
+				"X": 1.6e-2,
+				"Y": 0,
+				"Z": 0
+			},
+			"Normal": {
+				"X": -1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Id": 1
+		},
+		{
+			"MediumName": "Markoil",
+			"Center": {
+				"X": 1.6e-2,
+				"Y": 0,
+				"Z": 0
+			},
+			"Normal": {
+				"X": 1,
+				"Y": 0,
+				"Z": 0
+			},
+			"Id": 1
+		}
+	]
+}

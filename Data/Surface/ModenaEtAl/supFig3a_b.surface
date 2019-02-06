@@ -1,0 +1,33 @@
+{
+	"Cylinders": [{
+			"MediumName": "Bone",
+			"Radius": 2e-2,
+			"Center": {
+				"X": 3.6e-2,
+				"Y": 0,
+				"Z": 0
+			},
+			"ShaftDirection": {
+				"X": 0,
+				"Y": 0,
+				"Z": 1
+			},
+			"Id": 1
+		},
+		{
+			"MediumName": "Muscle",
+			"Radius": 2e-2,
+			"Center": {
+				"X": 3.6e-2,
+				"Y": 0,
+				"Z": 0
+			},
+			"ShaftDirection": {
+				"X": 0,
+				"Y": 0,
+				"Z": 1
+			},
+			"Id": 1
+		}
+	]
+}

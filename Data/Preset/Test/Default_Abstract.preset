@@ -1,0 +1,49 @@
+{
+	"Description": "The default abstract topology configuration",
+	"Sampling": {
+		"LatticeSpacing": {
+			"X": 2.44140625e-04,
+			"Y": 2.44140625e-04,
+			"Z": 2.44140625e-04
+		},
+		"LatticeExtrema": {
+			"X": {
+				"Min": 0,
+				"Max": 0.03125
+			},
+			"Y": {
+				"Min": -0.03125,
+				"Max": 0.03125
+			},
+			"Z": {
+				"Min": -0.03125,
+				"Max": 0.03125
+			}
+		},
+		"RaysPerElement": 1,
+		"PowerLimit": 1e-5,
+		"ThetaMax": 0.69
+	},
+	"System": {
+		"ObjectTransformation": {
+			"Inclination": 0,
+			"Azimuth": 0,
+			"ScaleFactor": 1,
+			"Translation": {
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			}
+		},
+		"TransducerSettings": {
+			"Power": 20,
+			"Frequency": 1.4e6,
+			"FocusDiameter": 2e-3,
+			"Focus": {
+				"X": 5e-2,
+				"Y": 0,
+				"Z": 0
+			}
+		}
+	}
+}

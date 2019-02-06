@@ -1,0 +1,13 @@
+{
+	"Name": "FromFileSolid",
+	"Density": 4,
+	"Acoustic attenuation":{
+		"Longitudinal": 5,
+		"Transversal": 6
+	},
+	"Speed of sound":{
+		"Longitudinal": 7,
+		"Transversal": 8
+	},
+	"Heat absorption fraction": 0.20
+}

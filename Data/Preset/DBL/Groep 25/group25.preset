@@ -1,0 +1,49 @@
+{
+	"Description": "Presets that are used by group 25 DBL Computational Biology.",
+	"Sampling": {
+		"LatticeSpacing": {
+			"X": 2.44140625e-04,
+			"Y": 2.44140625e-04,
+			"Z": 2.44140625e-04
+		},
+		"LatticeExtrema": {
+			"X": {
+				"Min": 0.044677734375000,
+				"Max": 0.048583984375000
+			},
+			"Y": {
+				"Min": -1.953125e-3,
+				"Max": 1.953125e-3
+			},
+			"Z": {
+				"Min": -3.90625e-3,
+				"Max": 3.90625e-3
+			}
+		},
+		"RaysPerElement": 10,
+		"PowerLimit": 5e-8,
+		"ThetaMax": 0.69
+	},
+	"System": {
+		"ObjectTransformation": {
+			"Inclination": 0,
+			"Azimuth": 0,
+			"ScaleFactor": 0.001,
+			"Translation": {
+				"X": 0.04665,
+				"Y": 0,
+				"Z": -0.0125
+			}
+		},
+		"TransducerSettings": {
+			"Power": 20,
+			"Frequency": 1.4e6,
+			"FocusDiameter": 2e-3,
+			"Focus": {
+				"X": 0.04665,
+				"Y": 0,
+				"Z": 0
+			}
+		}
+	}
+}

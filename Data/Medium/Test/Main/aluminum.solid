@@ -1,0 +1,13 @@
+{
+	"Name": "Aluminum",
+	"Density": 2.8,
+	"Acoustic attenuation":{
+		"Longitudinal": 1,
+		"Transversal": 1
+	},
+	"Speed of sound":{
+		"Longitudinal": 6250,
+		"Transversal": 3100
+	},
+	"Heat absorption fraction": 1
+}
