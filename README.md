@@ -8,16 +8,23 @@ Rotation and translation of objects used in **H**igh **I**ntensity **F**ocused *
 
 ## :checkered_flag: Deadline
 
-April 5 2019 17:30.
+April 21 2019 23:59.
 
 ## :dvd: Installation
 
 * [MATLAB](https://nl.mathworks.com/downloads/web_downloads/select_release) - install version 2018a+ with the curve fitting toolbox selected.
-* :floppy_disk: [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user)
 * :floppy_disk: [git](https://git-scm.com/download/win)
+* :floppy_disk: [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user)
 * :floppy_disk: [GMSH version 3.0.6](http://gmsh.info/bin/Windows/gmsh-3.0.6-Windows64.zip)
 
 ## :books: Documentation
+
+### Euler angles
+
+* [:movie_camera:Video 1](https://youtu.be/3Zjf95Jw2UE)
+* [:movie_camera:Video 2](https://youtu.be/zrDCI89bSp4)
+* [:movie_camera:Video 3](https://youtu.be/HBLZuV92qGw)
+* [:movie_camera:Video 4](https://youtu.be/4XcoUhpdUjw)
 
 ### Git
 
