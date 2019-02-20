@@ -211,7 +211,17 @@ classdef TriangleElement < handle
 			this.PointC = this.PointC + translation;
 			this.Incenter = this.Incenter + translation;
 			% Not translating normal vectors.
-		end
+        end
+% % % % %
+        function this = Rotate(this, rotationMatrix)
+            this.PointA = this.PointA*rotationMatrix;
+            this.PointB = this.PointB*rotationMatrix;
+            this.PointC = this.PointC*rotationMatrix;
+            this.Incenter = this.Incenter*rotationMatrix;
+            this.Edge1 = this.PointA-this.PointB;
+            this.Edge2 = this.PointA-this.PointC;
+        end
+% % % % % 
 		function this = Rescale(this, factor)
 			this.PointA = this.PointA * factor;
 			this.PointB = this.PointB * factor;

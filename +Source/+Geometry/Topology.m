@@ -128,7 +128,18 @@ classdef Topology
 				this.Planes);
 			Source.Helper.List.ForEach(@(mesh) mesh.Translate(translation),...
 				this.Meshes);
-		end
+        end
+% % % % %
+        function rotationMatrix = Rotate(this, rotation)            
+            ct = cos(rotation);
+            st = sin(rotation);
+            rotationMatrix =   [ct(:,2).*ct(:,1)                                ct(:,2).*st(:,1)                                    -st(:,2) ;
+                                st(:,3).*st(:,2).*ct(:,1) - ct(:,3).*st(:,1)    st(:,3).*st(:,2).*st(:,1) + ct(:,3).*ct(:,1)        st(:,3).*ct(:,2);
+                                ct(:,3).*st(:,2).*ct(:,1) + st(:,3).*st(:,1)    ct(:,3).*st(:,2).*st(:,1) - st(:,3).*ct(:,1)        ct(:,3).*ct(:,2)];              
+            Source.Helper.List.ForEach(@(mesh) mesh.Rotate(rotationMatrix),...
+				this.Meshes);            
+        end
+% % % % %
 		function Rescale(this, scaleFactor)
 			Source.Helper.List.ForEach(@(cyl) cyl.Rescale(scaleFactor),...
 				this.Cylinders);
@@ -136,7 +147,7 @@ classdef Topology
 				this.Planes);
 			Source.Helper.List.ForEach(@(mesh) mesh.Rescale(scaleFactor),...
 				this.Meshes);
-		end
+        end
 		function plotHandlesMap = ShowDebug(this, planeWidth, planeHeight,...
 				patchOptions)
 			plotHandlesMap = containers.Map('KeyType','char',...

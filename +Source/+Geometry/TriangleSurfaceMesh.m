@@ -146,7 +146,14 @@ classdef TriangleSurfaceMesh < handle & Source.Geometry.Boundary
 			this.Nodes = this.Nodes + translation;
 			Source.Helper.List.ForEach(@(triangleElement)...
 				triangleElement.Translate(translation), this.TriangleElements);
-		end
+        end
+% % % % % 
+        function this = Rotate(this, rotationMatrix)
+            this.Nodes = this.Nodes*rotationMatrix;
+            Source.Helper.List.ForEach(@(triangleElement)...
+				triangleElement.Rotate(rotationMatrix), this.TriangleElements);
+        end
+% % % % % 
 		function this = Rescale(this, scaleFactor)
 			this.Nodes = this.Nodes * scaleFactor;
 			Source.Helper.List.ForEach(@(triangleElement)...
