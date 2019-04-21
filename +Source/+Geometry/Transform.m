@@ -24,7 +24,21 @@ classdef Transform
 				        v(3)	 0		-v(1)
 				       -v(2)	 v(1)		0];
 			rotationMatrix = eye(3) + v_skew + v_skew^2 * ((1-c)/s^2);
-		end
+        end
+        function rotationMatrix = rotMatFromEulerZYX(rotation)      
+            ct = cos(rotation);
+            st = sin(rotation);
+            rotationMatrix =   [ct(:,2).*ct(:,1)                                ct(:,2).*st(:,1)                                   -st(:,2);
+                                st(:,3).*st(:,2).*ct(:,1) - ct(:,3).*st(:,1)    st(:,3).*st(:,2).*st(:,1) + ct(:,3).*ct(:,1)        st(:,3).*ct(:,2);
+                                ct(:,3).*st(:,2).*ct(:,1) + st(:,3).*st(:,1)    ct(:,3).*st(:,2).*st(:,1) - st(:,3).*ct(:,1)        ct(:,3).*ct(:,2)];
+        end
+        function rotationMatrix = rotMatFromEulerXYZ(rotation) %rotation in [Z Y X]
+            ct = cos(rotation);
+            st = sin(rotation);
+            rotationMatrix =   [ct(:,2).*ct(:,1)    ct(:,3).*st(:,1) + ct(:,1).*st(:,3).*st(:,2)    st(:,3).*st(:,1) - ct(:,3).*ct(:,1).*st(:,2);
+                               -ct(:,2).*st(:,1)    ct(:,3).*ct(:,1) - st(:,3).*st(:,2).*st(:,1)    ct(:,1).*st(:,3) + ct(:,3).*st(:,2).*st(:,1);
+                                st(:,2)            -ct(:,2).*st(:,3)                                ct(:,3).*ct(:,2)];                            
+        end
 		function rotationMatrix = GetRotationMatrix(rotationAxis, rotationAngle)
 		%% Calculate the rotation matrix around an axis "x", "y" or "z".
 			switch(rotationAxis)

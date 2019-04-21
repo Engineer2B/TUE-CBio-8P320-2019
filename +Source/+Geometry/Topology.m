@@ -1,11 +1,13 @@
-classdef Topology
+classdef Topology < handle % added < handle 
 	%TOPOLOGY A collection of objects that together make up the topology with
 	%which the rays interact.
 	properties
-		Cylinders
-		Planes
-		Meshes
-		SourceFileName
+        Cylinders
+        Planes
+        Meshes        
+        Rotation = [0 0 0];     % euler rotation [Z,Y,X]        
+        Translation = [0 0 0];  % translation [X,Y,Z]        
+        SourceFileName
 	end
 	properties(Constant)
 		ERROR_CODE_PREFIX = 'Source:Geometry:Topology:'
@@ -24,7 +26,7 @@ classdef Topology
 			if(isfield(dto, 'Meshes'))
 				obj.Meshes = arrayfun(@(meshDTO) Source.Geometry...
 					.TriangleSurfaceMesh.FromDTO(meshDTO, media,...
-					hasOutsideBoundariesFn), dto.Meshes);
+					hasOutsideBoundariesFn), dto.Meshes);                
 			end
 			if(isfield(dto, 'Cylinders'))
 				obj.Cylinders = arrayfun(@(cylDTO) Source.Geometry.Cylinder...
@@ -35,7 +37,7 @@ classdef Topology
 				.FromDTO(plaDTO, media, hasOutsideBoundariesFn), dto.Planes);
 			end
 		end
-		function obj = FromFile(filePath, media, hasOutsideBoundariesFn)
+		function obj = FromFile(filePath, media, hasOutsideBoundariesFn)            
 			obj = Source.Geometry.Topology.FromDTO(...
 				Source.IO.JSON.Read(filePath), filePath, media,...
 				hasOutsideBoundariesFn);
@@ -104,7 +106,29 @@ classdef Topology
 				.ApplyToHandleObj(plane), this.Planes);
 			Source.Helper.List.ForEach(@(mesh) transformation...
 				.ApplyToHandleObj(mesh), this.Meshes);
-		end
+        end
+        function TransformationsToJSON(this, fileDirectory)
+            Source.IO.JSON.Write(struct('Rotation',this.Rotation,'Translation',...
+                this.Translation),fileDirectory);
+        end
+        function TransformationsFromJSON(this, fileDirectory)            
+            if isfile(fileDirectory)
+                configValues = Source.IO.JSON.Read(fileDirectory);
+                if isfield(configValues,'Zoom')
+                    this.Rotate(configValues.Rotation(1:3)'*pi/180);
+                    this.Translate(configValues.Translation(1:3)'+...
+                        configValues.RotationOrigin(1:3)'-...
+                        configValues.RotationOrigin(1:3)'*...
+                        Source.Geometry.Transform.rotMatFromEulerZYX(this.Rotation));
+                else
+                    this.Rotate(configValues.Rotation');
+                    this.Translate(configValues.Translation');
+                end                
+            else
+                disp('No configuration file found in:');
+                disp(fileDirectory);
+            end
+        end
 		function ChangeInclination(this, angle)
 			Source.Helper.List.ForEach(@(cyl) cyl.ChangeInclination(angle),...
 				this.Cylinders);
@@ -128,18 +152,15 @@ classdef Topology
 				this.Planes);
 			Source.Helper.List.ForEach(@(mesh) mesh.Translate(translation),...
 				this.Meshes);
+            this.Translation = translation;
         end
-% % % % %
-        function rotationMatrix = Rotate(this, rotation)            
-            ct = cos(rotation);
-            st = sin(rotation);
-            rotationMatrix =   [ct(:,2).*ct(:,1)                                ct(:,2).*st(:,1)                                    -st(:,2) ;
-                                st(:,3).*st(:,2).*ct(:,1) - ct(:,3).*st(:,1)    st(:,3).*st(:,2).*st(:,1) + ct(:,3).*ct(:,1)        st(:,3).*ct(:,2);
-                                ct(:,3).*st(:,2).*ct(:,1) + st(:,3).*st(:,1)    ct(:,3).*st(:,2).*st(:,1) - st(:,3).*ct(:,1)        ct(:,3).*ct(:,2)];              
-            Source.Helper.List.ForEach(@(mesh) mesh.Rotate(rotationMatrix),...
-				this.Meshes);            
+		function Rotate(this, rotation)
+			rotationMatrix = Source.Geometry.Transform.rotMatFromEulerXYZ(-this.Rotation)*...
+				Source.Geometry.Transform.rotMatFromEulerZYX(rotation);
+			this.Rotation = rotation;
+			Source.Helper.List.ForEach(@(mesh) mesh.Rotate(rotationMatrix),...
+                this.Meshes);
         end
-% % % % %
 		function Rescale(this, scaleFactor)
 			Source.Helper.List.ForEach(@(cyl) cyl.Rescale(scaleFactor),...
 				this.Cylinders);
